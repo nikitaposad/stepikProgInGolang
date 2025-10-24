@@ -20,6 +20,7 @@ Sample Input:
 90
 Sample Output:
 It is 3 hours 0 minutes.
+
 */
 package main
 
@@ -27,8 +28,10 @@ import "fmt"
 
 func main(){
 	var d int
+	degree := 30
 	fmt.Scan(&d)
-	d = d / 30
-	fmt.Println(d)
+	h := d / degree
+	m := 2 * (d % degree)
+	fmt.Println("It is",h,"hours",m,"minutes")
 
 }
