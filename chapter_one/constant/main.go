@@ -18,7 +18,7 @@ const (
 
 Также, если для последующих констант не указаны значения, они будут
 автоматически принимать значение предыдущей константы.
-*/
+
 package main
 
 import "fmt"
@@ -34,3 +34,25 @@ func main(){
 	fmt.Println(A,B,C,D) // Вывод: 45 45 3.3 3.3
 }
 
+*/
+
+package main
+
+import (
+	"fmt"
+)
+
+const (
+	a = iota + 1
+	_
+	b
+	c
+	d = c + 2
+	t
+	i
+	i2 = iota + 2
+)
+
+func main(){
+	fmt.Println(i2)
+}
